@@ -27,7 +27,7 @@ if (Test-Path -Path $logFile) {
 New-Item -Path $logFile -ItemType File | Out-Null
 
 # Get all image and XMP files in the folder
-$imageFiles = Get-ChildItem -Path $sourceFolder -Recurse -Include *.jpg, *.jpeg, *.png, *.bmp, *.gif, *.xmp
+$imageFiles = Get-ChildItem -Path $sourceFolder -Recurse -Include *.jpg, *.jpeg, *.png, *.bmp, *.gif, *.xmp, *.mp4
 
 if ($imageFiles.Count -eq 0) {
     Write-Host "No image or XMP files found in the source folder." -ForegroundColor Yellow
